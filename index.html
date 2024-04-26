@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recomendador de Juegos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/styles.css">
+    <script src="./data.js" defer></script>
+    <script src="./main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.10.8/dist/sweetalert2.all.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.10.8/dist/sweetalert2.min.css" rel="stylesheet">
+</head>
+<body>
+    <p>recomendador de juegos</p>
+    <section>
+        <p>Consolas disponibles</p>
+        <div class="container mt-6">
+            <div class="row d-flex">
+                <div class="col-lg-4 col-md-6">
+                    <div class="card mb-4 producto">
+                        <img src="./img/CCKDRTUU7RMODGFHOWJ3XIB5HE.jpg" class="card-img-top" alt="Imagen RPG">
+                        <div class="card-body">
+                            <h3>NINTENDO</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="card mb-4 producto">
+                        <img src="./img/Xbox_app_logo.svg.png" class="card-img-top" alt="Imagen Aventura">
+                        <div class="card-body">
+                            <h3>XBOX</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="card mb-4 producto">
+                        <img src="./img/ps-logo.webp" class="card-img-top" alt="Imagen Shooter">
+                        <div class="card-body">
+                            <h3>Playstation</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <p>Géneros disponibles</p>
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 d-inline">
+                    <div class="card mb-4 producto">
+                        <img src="./img/rpg.png" class="card-img-top" alt="Imagen RPG">
+                        <div class="card-body">
+                            <h3>RPG</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 d-inline">
+                    <div class="card mb-4 producto">
+                        <img src="./img/aventura.jpg" class="card-img-top" alt="Imagen Aventura">
+                        <div class="card-body">
+                            <h3>Aventura</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 d-inline">
+                    <div class="card mb-4 producto">
+                        <img src="./img/shooter.avif" class="card-img-top" alt="Imagen Shooter">
+                        <div class="card-body">
+                            <h3>Shooter</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6 d-inline">
+                    <div class="card mb-4 producto">
+                        <img src="./img/pelea.jpg" class="card-img-top" alt="Imagen Pelea">
+                        <div class="card-body">
+                            <h3>Pelea</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="container mt-5">
+        <h1>Filtrador</h1>
+        <h2 id="resultadoTitulo"></h2>
+        <div class="mb-3">
+            <label for="consola-input" class="form-label">Consola:</label>
+            <input type="text" class="form-control" id="consola-input" placeholder="Elige la consola">
+        </div>
+        <div class="mb-3">
+            <label for="genero-input" class="form-label">Género:</label>
+            <input type="text" class="form-control" id="genero-input" placeholder="Elige el género">
+        </div>
+        <button type="button" class="btn btn-primary" id="filtrar-button">Filtrar Juegos</button>
+        <button type="button" class="btn btn-secondary" id="reiniciar-button">Reiniciar</button>
+        <div id="juegos-container" class="mt-4"></div>
+    </div>
+    <div class="container mt-5">
+        <h1>Carrito</h1>
+        <div id="carrito" class="mt-4"></div>
+    </div>
+</body>
+</html>
